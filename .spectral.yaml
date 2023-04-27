@@ -1,0 +1,9 @@
+extends: ["spectral:oas", "spectral:asyncapi"]
+
+functions: [abc]
+rules:
+  my-rule:
+    message: "{{error}}"
+    given: "$.info.description"
+    then:
+      function: "abc"
